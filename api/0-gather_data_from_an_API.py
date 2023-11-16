@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ This a basic get request from an API """
+import json
 from requests import get
 from sys import argv
-import json
 url = "https://jsonplaceholder.typicode.com/users/"
 url1 = "https://jsonplaceholder.typicode.com/todos/"
 
