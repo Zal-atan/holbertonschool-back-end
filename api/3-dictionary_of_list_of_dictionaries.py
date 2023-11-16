@@ -22,7 +22,7 @@ def get_response():
         todo = json.loads(todo_response.text)
     user_dic = {}
     for user in users:
-        username = user["name"]
+        username = user["username"]
         id = user["id"]
         complete_list = []
         for item in todo:
