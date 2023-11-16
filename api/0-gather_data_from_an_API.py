@@ -33,7 +33,10 @@ def get_response():
     # print(name)
     # print(f"{completed}/{tasks}")
 
-    print(f"Employee {name} is done with tasks({completed}/{tasks}:")
+    first_line = ("Employee {} is done with tasks({}/{}):".format(name,
+                                                                  completed,
+                                                                  tasks))
+    print(first_line)
     for item in completed_list:
         print(f"\t {item}")
 
