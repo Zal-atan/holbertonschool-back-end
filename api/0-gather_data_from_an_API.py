@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """ This a basic get request from an API """
-
 from requests import get
-import json
 from sys import argv
+import json
 url = "https://jsonplaceholder.typicode.com/users/"
 url1 = "https://jsonplaceholder.typicode.com/todos/"
+
 
 if __name__ == "__main__":
 
