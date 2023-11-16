@@ -32,8 +32,8 @@ def get_response():
         name = info[0]["name"]
     # print(name)
     # print(f"{completed}/{tasks}")
-
-    print(f"Employee {name} is done with tasks({completed}/{tasks}):")
+    first_line = (f"Employee {name} is done with tasks({completed}/{tasks}):")
+    print(first_line)
     for item in completed_list:
         print(f"\t {item}")
 
