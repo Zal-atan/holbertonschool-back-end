@@ -2,15 +2,17 @@
 """
 This a basic get request from an API
 """
+
 import json
 from requests import get
 from sys import argv
+
 url = "https://jsonplaceholder.typicode.com/users/"
 url1 = "https://jsonplaceholder.typicode.com/todos/"
 
 
-if __name__ == "__main__":
-
+def get_response():
+    """ This is a basic API call function"""
     response = get(url1, {"userId": argv[1]})  # , {"id": argv[1]})
     if response.status_code == 200:
         info = json.loads(response.text)
@@ -33,3 +35,7 @@ if __name__ == "__main__":
     print(f"Employee {name} is done with tasks({completed}/{tasks})")
     for item in completed_list:
         print(f"\t {item}")
+
+
+if __name__ == "__main__":
+    get_response()
