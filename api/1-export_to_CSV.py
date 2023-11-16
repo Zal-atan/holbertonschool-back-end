@@ -43,7 +43,6 @@ def write_to_csv(list_to_write):
             csv_writer.writerow(item)
 
 
-
 if __name__ == "__main__":
     response_list = get_response()
     write_to_csv(response_list)
