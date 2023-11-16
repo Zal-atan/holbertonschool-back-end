@@ -12,7 +12,8 @@ url1 = "https://jsonplaceholder.typicode.com/todos/"
 
 
 def get_response():
-    """ This is a basic API call function"""
+    """ This is a basic API call function """
+
     response = get(url1, {"userId": argv[1]})  # , {"id": argv[1]})
     if response.status_code == 200:
         info = json.loads(response.text)
