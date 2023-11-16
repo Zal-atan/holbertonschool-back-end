@@ -18,7 +18,6 @@ def get_response():
     user_response = get(url, {"id": argv[1]})
     if user_response.status_code == 200:
         user = json.loads(user_response.text)
-    print(user[0]["username"])
     todo_response = get(url1, {"userId": argv[1]})
     if todo_response.status_code == 200:
         todo = json.loads(todo_response.text)
@@ -38,7 +37,7 @@ def write_to_csv(list_to_write):
     """Write an input list of lists into a csv file"""
     filename = f"{argv[1]}.csv"
     with open(filename, 'w') as file:
-        csv_writer = csv.writer(file)
+        csv_writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for item in list_to_write:
             csv_writer.writerow(item)
 
